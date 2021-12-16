@@ -1,0 +1,14 @@
+{:prod true
+ :port 3000
+ :private-key "<PRIVATE KEY>"
+ :base-url "<PRODUCITON BASE URL>"
+ :max-file-size 100
+ :mail-account {:host "<SMTP SERVER>"
+                :port 587
+                :user "<USER>"
+                :pass "<PASSWORD>"
+                :tls true}
+ :datahike {:store {:backend :file
+                    :path "<PATH TO DATAHIKE DATA FOLDER>"}
+            :schema-flexibility :write
+            :keep-history? true}}

@@ -1,0 +1,12 @@
+{:private-key "kana15"
+ :base-url ""
+ :max-file-size 40                                      ;; in Mb
+ :mail-account {:host "<SMTP SERVER>"
+                :port 587
+                :user "<USER>"
+                :pass "<PASSWORD>"
+                :tls true}
+ :datahike {:store {:backend  :mem
+                    :id       "mtool-db-test"}
+            :schema-flexibility :write
+            :keep-history? true}}

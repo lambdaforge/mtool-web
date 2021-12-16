@@ -1,0 +1,38 @@
+{:topic "Test Study"
+ :description "Some study examining something"
+ :mapping1 {:audio {:link "/participant/audio/mapping.m4a"}
+            :video {:link "/participant/video/Instructions.mp4"}
+            :fixedIcon {:image {:link "/participant/images/O.png"}
+                        :position :left}
+            :icons [{:name "iconA"
+                     :image {:link "/participant/images/A.png"}
+                     :audio {:link "/participant/audio/A.m4a"}
+                     :use? true}
+                    {:name "iconB"
+                     :image {:link "/participant/images/A.png"}
+                     :audio {:link "/participant/audio/A.m4a"}
+                     :use? false}]}
+ :barChart {:audio {:link "/participant/audio/A.m4a"}
+            :video {:link "/participant/video/Instructions.mp4"}
+            :image {:link "/participant/images/A.png"}
+            :title "Some Bars Showing Change of As Over Time"
+            :xTitle "Time"
+            :xStart 2000
+            :xEnd 2020
+            :xStepSize 5
+            :yStepSize 1
+            :yTitle "As"
+            :yStart 0
+            :yEnd 10}
+ :positiveArrows? true
+ :negativeArrows? true
+ :doubleHeadedArrows? true
+ :consentText "I hereby agree on everything"
+ :consentLink "http://localhost:3000"
+ :survey "http://localhost:3000"
+ :introduction {:video {:link "/participant/video/Introduction.mp4"}
+                :audio {:link "/participant/audio/practice.m4a"}
+                :message "Welcome to MTool!"}
+ :practice {:audio {:link "/participant/audio/practice.m4a"}}
+ :thankYou {:audio {:link "/participant/audio/thank_you.m4a"}
+            :message "Thank you for participating in this study!"}}

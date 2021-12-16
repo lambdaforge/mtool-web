@@ -1,0 +1,24 @@
+[{:user/id "3afb82dd-034f-4e4a-b862-06719831a42b"
+  :user/email "abc@example.com"
+  :user/pwd "bcrypt+sha512$2c3ee0ae8d25e6fc5f78e0e0a14d9386$12$3e9292df28349c7d02f71687d9d56882039ebd64f848d3dc"
+  ;; for password "123"
+  :user/verified true
+  :user/createdAt #inst "2021-01-13T23:20:50.52Z"}
+ {:user/id "f87dce97-e010-4b4a-a38e-4bbd82bf01ef"
+  :user/email "efg@example.de"
+  :user/pwd "bcrypt+sha512$21700f6a994554e25436f4fb7f676642$12$62326294866550d44b20fb29120930eb413110d76645f857"
+  ;; for password 456
+  :user/verified false
+  :user/createdAt #inst "2020-04-12T11:10:33.49Z"}
+ {:user/id "2d7312e8-a8d1-4016-861f-e55781dd0c2e"
+  :user/email "hij@example.com"
+  :user/pwd "bcrypt+sha512$5fbbce00a5209d51d32510eebe5797ce$12$c90c1e43dbef151312a95c8483a5e49a349d886cc68365af"
+  ;; for password 789
+  :user/verified true
+  :user/createdAt #inst "2020-05-12T13:41:12.21Z"}
+ {:user/id "7d29a116-1ce8-4e9d-8e22-b2f8881379a6"
+  :user/email "123@example.com"
+  :user/pwd "bcrypt+sha512$40370a0c97ecd2368d6a27616cac5198$12$b4dc30d27e034fc2cd2fce362258e0a83ba3434790915200"
+  ;; for password "abc"
+  :user/verified true
+  :user/createdAt #inst "2021-01-13T23:20:50.52Z"}]

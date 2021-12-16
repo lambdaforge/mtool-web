@@ -1,0 +1,19 @@
+version: "3.9"
+
+networks:
+   web:
+     external: true
+
+services:
+  mtool_web:
+    container_name: mtool_web
+    build: .
+    restart: always    
+#    ports:
+#      - "3000:3000"
+    volumes:
+      - /home/mtool/db:/home/mtool/db
+      - /home/mtool/mtool-binary/mtool-log:/root/log/
+      - /home/mtool/mtool-binary/userfiles:/root/userfiles/      
+    networks:
+       - web

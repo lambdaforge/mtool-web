@@ -1,0 +1,295 @@
+[{:db/doc                "User ID as UUID string"
+  :db/ident              :user/id
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/unique             :db.unique/identity}
+ {:db/doc                "User email address"
+  :db/ident              :user/email
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/unique             :db.unique/identity}
+ {:db/doc                "User password"
+  :db/ident              :user/pwd
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "User account verified flag"
+  :db/ident              :user/verified
+  :db/valueType          :db.type/boolean
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "User creation date"
+  :db/ident              :user/createdAt
+  :db/valueType          :db.type/instant
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "User studies"
+  :db/ident              :user/studies
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/many
+  :db/isComponent        true}
+
+ {:db/doc                "Media ID as UUID string"
+  :db/ident              :media/id
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/unique             :db.unique/identity}
+ {:db/doc                "Researcher owning the media"
+  :db/ident              :media/owner
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Media file name"
+  :db/ident              :media/filename
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Media name"
+  :db/ident              :media/name
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Media note"
+  :db/ident              :media/note
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Link to media resource"
+  :db/ident              :media/link
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/unique             :db.unique/identity}
+ {:db/doc                "Path to media resource"
+  :db/ident              :media/path
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Media type, one of :image, :audio, :video "
+  :db/ident              :media/type
+  :db/valueType          :db.type/keyword
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Time of media upload"
+  :db/ident              :media/addedAt
+  :db/valueType          :db.type/instant
+  :db/cardinality        :db.cardinality/one}
+
+ {:db/doc                "Study ID as UUID string"
+  :db/ident              :study/id
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/unique             :db.unique/identity}
+ {:db/doc                "Topic of the study"
+  :db/ident              :study/topic
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Study description"
+  :db/ident              :study/description
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Settings for first mapping screen"
+  :db/ident              :study/mapping1
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/isComponent        true}
+ {:db/doc                "Settings for second mapping screen"
+  :db/ident              :study/mapping2
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/isComponent        true}
+ {:db/doc                "Settings for bar chart screen"
+  :db/ident              :study/barChart
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/isComponent        true}
+ {:db/doc                "Decides if positive arrows can be drawn on mapping screens"
+  :db/ident              :study/positiveArrows?
+  :db/valueType          :db.type/boolean
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Decides if negative arrows can be drawn on mapping screens"
+  :db/ident              :study/negativeArrows?
+  :db/valueType          :db.type/boolean
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Decides if double headed arrows can be drawn on mapping screens"
+  :db/ident              :study/doubleHeadedArrows?
+  :db/valueType          :db.type/boolean
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Flag showing if study has been activated"
+  :db/ident              :study/active?
+  :db/valueType          :db.type/boolean
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Creation date of study"
+  :db/ident              :study/createdAt
+  :db/valueType          :db.type/instant
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Participant link"
+  :db/ident              :study/link
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Study session results received from participants"
+  :db/ident              :study/sessions
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/many
+  :db/isComponent        true}
+ {:db/doc                "Introduction screen for study"
+  :db/ident              :study/introduction
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/isComponent        true}
+ {:db/doc                "Thank-you screen"
+  :db/ident              :study/thankYou
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/isComponent        true}
+ {:db/doc                "Thank-you screen"
+  :db/ident              :study/practice
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/isComponent        true}
+ {:db/doc                "Survey of the study"
+  :db/ident              :study/survey
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Consent text of the study"
+  :db/ident              :study/consentText
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Consent link of the study"
+  :db/ident              :study/consentLink
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ 
+
+ {:db/doc                "Audio played on practice mapping screen"
+  :db/ident              :practice/audio
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+
+ {:db/doc                "Introduction video for study"
+  :db/ident              :introduction/video
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Introduction audio for study"
+  :db/ident              :introduction/audio
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Message on start screen"
+  :db/ident              :introduction/message
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+
+ {:db/doc                "Audio played on thank-you screen"
+  :db/ident              :thankYou/audio
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Message on thank-you screen"
+  :db/ident              :thankYou/message
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+
+ {:db/doc                "Video showing instructions for mapping screen"
+  :db/ident              :mapping/video
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Audio played on mapping screen"
+  :db/ident              :mapping/audio
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Icons used on mapping screen"
+  :db/ident              :mapping/icons
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/many
+  :db/isComponent        true}
+ {:db/doc                "Fixed icon on mapping screens"
+  :db/ident              :mapping/fixedIcon
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one
+  :db/isComponent        true}
+
+ {:db/doc                "Fixed icon position on mapping screens, one of: :left :center :right"
+  :db/ident              :fixedIcon/position
+  :db/valueType          :db.type/keyword
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Fixed icon image on mapping screens"
+  :db/ident              :fixedIcon/image
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+
+ {:db/doc                "Video showing instructions for bar chart screen"
+  :db/ident              :barChart/video
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Audio played on bar chart screen"
+  :db/ident              :barChart/audio
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Icon shown on bar chart screen"
+  :db/ident              :barChart/image
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Title for bar chart"
+  :db/ident              :barChart/title
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Title of x axis"
+  :db/ident              :barChart/xTitle
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Title of y axis"
+  :db/ident              :barChart/yTitle
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Label of y axis zero line"
+  :db/ident              :barChart/yStart
+  :db/valueType          :db.type/long
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "label of last element on y axis "
+  :db/ident              :barChart/yEnd
+  :db/valueType          :db.type/long
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Label of first bar"
+  :db/ident              :barChart/xStart
+  :db/valueType          :db.type/long
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Label of last"
+  :db/ident              :barChart/xEnd
+  :db/valueType          :db.type/long
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Factor for one step"
+  :db/ident              :barChart/xStepSize
+  :db/valueType          :db.type/long
+  :db/cardinality        :db.cardinality/one}
+
+ {:db/doc                "Name for icon"
+  :db/ident              :icon/name
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Image for icon"
+  :db/ident              :icon/image
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Audio explaining the icon"
+  :db/ident              :icon/audio
+  :db/valueType          :db.type/ref
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Flag showing if icon is shown on mapping screen"
+  :db/ident              :icon/use?
+  :db/valueType          :db.type/boolean
+  :db/cardinality        :db.cardinality/one}
+
+ {:db/doc                "Study session ID as UUID string"
+  :db/ident              :session/id
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one
+  :db/unique             :db.unique/identity}
+ {:db/doc                "Study session data of first mapping screen"
+  :db/ident              :session/mapping1Result
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Study session data of second mapping screen"
+  :db/ident              :session/mapping2Result
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Study session data of bar chart screen"
+  :db/ident              :session/barChartResult
+  :db/valueType          :db.type/string
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Study session start date"
+  :db/ident              :session/startedAt
+  :db/valueType          :db.type/instant
+  :db/cardinality        :db.cardinality/one}
+ {:db/doc                "Study session duration"
+  :db/ident              :session/duration
+  :db/valueType          :db.type/float
+  :db/cardinality        :db.cardinality/one}]
