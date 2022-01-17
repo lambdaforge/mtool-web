@@ -81,6 +81,9 @@
   [:section.section>div.container>div.content
    [:h3.title.is-4 "Welcome"]
    [:p "Welcome to the Mental Model Mapping Tool, or M-Tool. You can use this tool to capture perceptions of complex systems or phenomena (mental models). This tool is specially designed to allow you to compare mental models, and assess mental models of a diverse sample, by giving you the option to include audio instructions and visual components."]
+   [:p "You can learn more about M-Tool in our open access paper in System Dynamics Review " [:a {:href "https://doi.org/10.1002/sdr.1698"} "here"] "."]
+   [:p "For the evaluation of the validaty of the tool, see our open access paper in Frontiers in Psychology " [:a {:href "https://doi.org/10.3389/fpsyg.2021.761882."} "here"] "."]
+   [:p "You can also download our R-script to analyse M-Tool data " [:a {:href "http://doi.org/10.24416/UU01-Y8GP93"} "here"] "."]
    [:p "Please log-in to start using M-Tool. Next, you can upload the relevant media files under Media, and then create a study under Studies. For more information on how to use this tool, you can download the manual " [:a {:href "https://www.m-tool.org/gallery/M-Tool%20manual%20web%20based%20version.pdf" :target "_blank"} "here"] " or go to the M-Tool " [:a {:href "https://m-tool.org" :target "_blank"} "website."]]])
 
 (defn error-panel []
