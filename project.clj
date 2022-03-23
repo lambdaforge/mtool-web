@@ -81,9 +81,9 @@
      :output-to "target/test/test.js"
      :autorun true}}}
   
-  :npm-deps [[react-data-table-component "6.11.6"]
-             [react "17.0.1"]
-             [react-dom "17.0.1"]
+  :npm-deps [[react-data-table-component "7.4.7"]
+             [react "17.0.2"]
+             [react-dom "17.0.2"]
              [styled-components "5.2.1"]
              [process "0.11.10"]]
   :npm-dev-deps [[xmlhttprequest "1.8.0"]]
